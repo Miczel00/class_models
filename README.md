@@ -30,3 +30,16 @@ For each method, the GridSearchCV parameters varied depending on what hyperparam
 | RF    | Training set | 0.93     | 0.95      | 0.94        | 0.94        | 0.86        | 0.93        |
 |       | Test set     | 0.75     | 0.79      | 0.81        | 0.80        | 0.47        | 0.66        |
 
+# Conclusions 
+I conducted an evaluation of the effectiveness of three popular classification methods: SVM, k-NN, and RF, in terms of their utility in the assessment of chemical hazard posed by structurally diverse organic compounds. The research was conducted using binary classification based on acute toxicity towards Oryzias latipes. The analysis of the obtained results allowed me to formulate several important conclusions:
+
+• The SVM model exhibited high accuracy in the training set (89%) and acceptable accuracy in the test set (75%). This model showed good precision (79%) and sensitivity (81%) on the test set. These results suggest that the SVM classification model can be an effective tool for binary classification of organic compounds. However, it is worth noting that due to class imbalance, the values of the Matthews' coefficient and specificity are relatively low (0.47 and 0.66, respectively), indicating that the model may have difficulty correctly classifying compounds into the minority class (in this case, the "low toxicity/non-toxic" class).
+
+• The k-NN model achieved acceptable accuracy on the test set (78%) and higher precision (80%) and sensitivity (85%) compared to the SVM model. The values of the Matthews' coefficient and specificity are also slightly higher (0.54 and 0.68, respectively). These results indicate that the k-NN model may be more robust to the problem of imbalanced input data.
+
+• The RF model achieved high accuracy in both the training set (93%) and the test set (75%). Precision (79%) and sensitivity (81%) were at a similar level to the SVM model. The values of the Matthews' coefficient and specificity are comparable to the results obtained by SVM and k-NN.
+
+# Files
+- Methods.ipynb file - code in Python language
+- data.xlsx - MS Excel file containing data used for modeling 
+- data_with_predictions.xlsx - MS Excel file containing the data used for modeling along with the class labels predicted by the developed classification models (SVM, k-NN and RF)
